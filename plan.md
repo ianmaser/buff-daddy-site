@@ -40,7 +40,7 @@ Add `.env.local` to `.gitignore` if not already there. Then open Claude Code.
 
 ## Phases
 
-- [ ] **Phase 1 — Design Tokens & Global Styles**
+- [x] **Phase 1 — Design Tokens & Global Styles**
 
 > Read this plan.md to understand the project context: Buff Daddy's is a high-protein dessert brand based in Dallas. The full palette and design system is already decided.
 >
