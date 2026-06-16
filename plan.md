@@ -68,7 +68,7 @@ Add `.env.local` to `.gitignore` if not already there. Then open Claude Code.
 
 ---
 
-- [ ] **Phase 2 — TypeScript Types & Data Layer**
+- [x] **Phase 2 — TypeScript Types & Data Layer**
 
 > Do the following and nothing else:
 >
@@ -260,7 +260,7 @@ Add `.env.local` to `.gitignore` if not already there. Then open Claude Code.
 
 ---
 
-- [ ] **Phase 3 — Component Scaffold & Error Boundaries**
+- [x] **Phase 3 — Component Scaffold & Error Boundaries**
 
 > Do the following and nothing else — create empty placeholder components with just a named default export returning `null`. Do not write any real UI yet.
 >
@@ -307,7 +307,7 @@ Add `.env.local` to `.gitignore` if not already there. Then open Claude Code.
 
 ---
 
-- [ ] **Phase 4 — Layout Components**
+- [x] **Phase 4 — Layout Components**
 
 > Build the three layout components and the SocialStrip. Use Tailwind classes only — no inline styles. Use CSS variables where Tailwind tokens aren't enough.
 >
@@ -348,7 +348,7 @@ Add `.env.local` to `.gitignore` if not already there. Then open Claude Code.
 
 ---
 
-- [ ] **Phase 5 — Hooks & Hero & StatsStrip**
+- [x] **Phase 5 — Hooks & Hero & StatsStrip**
 
 > First, implement the shared hooks. Then build the sections.
 >

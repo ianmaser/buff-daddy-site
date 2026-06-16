@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, Inter } from "next/font/google";
 import "./globals.css";
+import AnnouncementBar from "@/components/layout/AnnouncementBar";
+import Navbar from "@/components/layout/Navbar";
+import SocialStrip from "@/components/layout/SocialStrip";
+import Footer from "@/components/layout/Footer";
 
 const bebasNeue = Bebas_Neue({
   weight: "400",
@@ -31,7 +35,13 @@ export default function RootLayout({
       lang="en"
       className={`${bebasNeue.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <AnnouncementBar />
+        <Navbar />
+        {children}
+        <SocialStrip />
+        <Footer />
+      </body>
     </html>
   );
 }
