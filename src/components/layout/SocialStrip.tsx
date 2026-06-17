@@ -12,7 +12,7 @@ export default function SocialStrip() {
           href={siteConfig.instagramUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-white/20 text-white border border-white/40 text-sm font-semibold px-4 py-1.5 rounded-full hover:bg-white hover:text-[var(--pink)] hover:-translate-y-0.5 active:scale-95"
+          className="bg-white/20 text-white border border-white/40 text-sm font-semibold px-4 py-1.5 rounded-full hover:bg-white hover:text-[var(--pink)] hover:-translate-y-0.5 active:scale-95 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--pink)]"
         >
           Instagram {siteConfig.instagram}
         </a>
@@ -20,7 +20,7 @@ export default function SocialStrip() {
           href={siteConfig.tiktokUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-white/20 text-white border border-white/40 text-sm font-semibold px-4 py-1.5 rounded-full hover:bg-white hover:text-[var(--pink)] hover:-translate-y-0.5 active:scale-95"
+          className="bg-white/20 text-white border border-white/40 text-sm font-semibold px-4 py-1.5 rounded-full hover:bg-white hover:text-[var(--pink)] hover:-translate-y-0.5 active:scale-95 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--pink)]"
         >
           TikTok {siteConfig.tiktok}
         </a>

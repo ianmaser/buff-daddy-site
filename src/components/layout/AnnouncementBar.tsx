@@ -6,7 +6,7 @@ export default function AnnouncementBar() {
       {content.announcement.text}{' '}
       <a
         href={content.announcement.linkHref}
-        className="text-[var(--cyan)] font-semibold hover:underline"
+        className="text-[var(--cyan)] font-semibold hover:underline focus-visible:ring-2 focus-visible:ring-[var(--cyan)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--navy)] rounded"
       >
         {content.announcement.linkLabel}
       </a>

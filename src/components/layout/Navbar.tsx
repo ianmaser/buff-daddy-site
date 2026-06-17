@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { siteConfig } from '@/config/site';
 import { useScrolled } from '@/hooks/useScrolled';
 import { useActiveSection } from '@/hooks/useActiveSection';
@@ -12,7 +12,34 @@ export default function Navbar() {
   const scrolled = useScrolled();
   const activeSection = useActiveSection(SECTION_IDS);
 
+  const drawerRef = useRef<HTMLDivElement>(null);
   const closeDrawer = () => setDrawerOpen(false);
+
+  // Focus trap for mobile drawer
+  useEffect(() => {
+    if (!drawerOpen) return;
+    const drawer = drawerRef.current;
+    if (!drawer) return;
+
+    const focusable = Array.from(
+      drawer.querySelectorAll<HTMLElement>('a[href], button:not([disabled])'),
+    );
+    focusable[0]?.focus();
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab' || focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+      } else {
+        if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [drawerOpen]);
 
   const isActive = (href: string) => {
     const id = href.replace('#', '');
@@ -31,7 +58,7 @@ export default function Navbar() {
       >
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between gap-8">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2 shrink-0">
+          <a href="/" className="flex items-center gap-2 shrink-0 focus-visible:ring-2 focus-visible:ring-[var(--cyan)] focus-visible:ring-offset-2 rounded">
             <div className="w-8 h-8 rounded-full bg-[var(--navy)] flex items-center justify-center text-base leading-none">
               <span aria-hidden="true">💪</span>
             </div>
@@ -91,7 +118,7 @@ export default function Navbar() {
           />
 
           {/* Drawer panel */}
-          <div className="absolute top-0 left-0 right-0 bg-[var(--navy)] px-6 py-8 flex flex-col gap-6">
+          <div ref={drawerRef} className="absolute top-0 left-0 right-0 bg-[var(--navy)] px-6 py-8 flex flex-col gap-6">
             <div className="flex items-center justify-between">
               <span className="font-display text-xl tracking-widest text-white">
                 BUFF<span className="text-[var(--pink)]">DADDY&apos;S</span>
@@ -121,7 +148,7 @@ export default function Navbar() {
             <a
               href="#order"
               onClick={closeDrawer}
-              className="bg-[var(--pink)] text-white font-semibold text-center py-3 rounded-full hover:-translate-y-0.5 hover:shadow-[0_4px_16px_rgba(255,62,165,0.4)] active:scale-[0.98]"
+              className="bg-[var(--pink)] text-white font-semibold text-center py-3 rounded-full hover:-translate-y-0.5 hover:shadow-[0_4px_16px_rgba(255,62,165,0.4)] active:translate-y-0 active:scale-[0.98]"
             >
               Order Now
             </a>

@@ -61,13 +61,13 @@ export default function Hero(): React.ReactElement {
           <div className="flex flex-wrap gap-4">
             <a
               href={content.hero.primaryCta.href}
-              className="bg-[var(--pink)] text-white font-semibold px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(255,62,165,0.4)] active:translate-y-0 active:scale-[0.98]"
+              className="bg-[var(--pink)] text-white font-semibold px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(255,62,165,0.4)] active:translate-y-0 active:scale-[0.98] focus-visible:ring-2 focus-visible:ring-[var(--cyan)] focus-visible:ring-offset-2"
             >
               {content.hero.primaryCta.label}
             </a>
             <a
               href={content.hero.secondaryCta.href}
-              className="border-2 border-[var(--navy)] text-[var(--navy)] font-semibold px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:scale-[0.98]"
+              className="border-2 border-[var(--navy)] text-[var(--navy)] font-semibold px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:scale-[0.98] focus-visible:ring-2 focus-visible:ring-[var(--cyan)] focus-visible:ring-offset-2"
             >
               {content.hero.secondaryCta.label}
             </a>
