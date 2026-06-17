@@ -22,7 +22,7 @@ export default function Footer() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="text-sm text-white/50 hover:text-[var(--cyan)] hover:translate-x-0.5 inline-block transition-transform"
+                  className="text-sm text-white/50 hover:text-[var(--cyan)] hover:translate-x-0.5 inline-block transition-transform focus-visible:ring-2 focus-visible:ring-[var(--cyan)] focus-visible:ring-offset-2 focus-visible:ring-offset-[#060714] rounded"
                 >
                   {link.label}
                 </a>

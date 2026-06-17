@@ -390,7 +390,7 @@ Add `.env.local` to `.gitignore` if not already there. Then open Claude Code.
 
 ---
 
-- [ ] **Phase 6 — UI Primitives**
+- [x] **Phase 6 — UI Primitives**
 
 > Build the small reusable UI components. These will be used by ProductCard and other sections.
 >
@@ -427,7 +427,7 @@ Add `.env.local` to `.gitignore` if not already there. Then open Claude Code.
 
 ---
 
-- [ ] **Phase 7 — Products & WhyUs Sections**
+- [x] **Phase 7 — Products & WhyUs Sections**
 
 > **Products.tsx**
 >
@@ -457,7 +457,7 @@ Add `.env.local` to `.gitignore` if not already there. Then open Claude Code.
 
 ---
 
-- [ ] **Phase 8 — OurStory Section**
+- [x] **Phase 8 — OurStory Section**
 
 > **OurStory.tsx**
 >
@@ -475,7 +475,7 @@ Add `.env.local` to `.gitignore` if not already there. Then open Claude Code.
 
 ---
 
-- [ ] **Phase 9 — API Routes**
+- [x] **Phase 9 — API Routes**
 
 > Create two API routes. These run server-side only. Use env vars from .env.local.
 >
@@ -530,7 +530,7 @@ Add `.env.local` to `.gitignore` if not already there. Then open Claude Code.
 
 ---
 
-- [ ] **Phase 10 — OrderForm Section**
+- [x] **Phase 10 — OrderForm Section**
 
 > **OrderForm.tsx** (`'use client'`)
 >
@@ -552,7 +552,7 @@ Add `.env.local` to `.gitignore` if not already there. Then open Claude Code.
 
 ---
 
-- [ ] **Phase 11 — Contact Section**
+- [x] **Phase 11 — Contact Section**
 
 > **Contact.tsx** (`'use client'` for form only — consider splitting into a server wrapper + client form child component for best practice)
 >
@@ -574,7 +574,7 @@ Add `.env.local` to `.gitignore` if not already there. Then open Claude Code.
 
 ---
 
-- [ ] **Phase 12 — Polish Pass: Micro-interactions & Page Feel**
+- [x] **Phase 12 — Polish Pass: Micro-interactions & Page Feel**
 
 > This phase is purely additive polish. Do not change any layout, copy, or data. Fix issues you find but don't refactor working code.
 >
@@ -612,7 +612,7 @@ Add `.env.local` to `.gitignore` if not already there. Then open Claude Code.
 
 ---
 
-- [ ] **Phase 13 — SEO, Metadata & Structured Data**
+- [x] **Phase 13 — SEO, Metadata & Structured Data**
 
 > **Metadata** — in `src/app/layout.tsx`, import `siteConfig` and export:
 >
@@ -682,7 +682,7 @@ Add `.env.local` to `.gitignore` if not already there. Then open Claude Code.
 
 ---
 
-- [ ] **Phase 14 — Mobile Audit & Accessibility**
+- [x] **Phase 14 — Mobile Audit & Accessibility**
 
 > Do a full responsive and accessibility pass. Fix issues — do not add new features.
 >
@@ -713,7 +713,7 @@ Add `.env.local` to `.gitignore` if not already there. Then open Claude Code.
 
 ---
 
-- [ ] **Phase 15 — Analytics & Final Checks**
+- [x] **Phase 15 — Analytics & Final Checks**
 
 > 1. Install Vercel Analytics: `npm install @vercel/analytics`. Add `<Analytics />` from `@vercel/analytics/react` to `src/app/layout.tsx`. This is one component, zero configuration, and gives you page view + web vitals data in the Vercel dashboard for free.
 > 2. Create `CHANGELOG.md` in the project root:

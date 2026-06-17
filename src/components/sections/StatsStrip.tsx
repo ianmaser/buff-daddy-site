@@ -32,7 +32,7 @@ function StatItem({ value, label, delay }: StatItemProps): React.ReactElement {
 export default function StatsStrip(): React.ReactElement {
   return (
     <section className="bg-[var(--navy)]">
-      <div className="max-w-4xl mx-auto flex flex-wrap justify-center divide-x divide-white/10">
+      <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-4 divide-x divide-y divide-white/10">
         {content.stats.map((stat, i) => (
           <StatItem
             key={stat.label}
