@@ -1,0 +1,7 @@
+{
+  "name": "Buff Daddy's Wireframe Generator",
+  "id": "buffdaddys-wireframe-gen",
+  "api": "1.0.0",
+  "main": "code.js",
+  "editorType": ["figma"]
+}
